@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - '.'
 
 jobs:
   run-checkov-scanner:
@@ -14,6 +12,6 @@ jobs:
     secrets: inherit
     uses: krakenteknologies/kt-workflows/.github/workflows/terraform-module-scanner.yaml@main
     with:
-      scan_directory: foundations/state
+      scan_directory: .
       framework: terraform
       soft_fail: false
