@@ -1,4 +1,4 @@
-name: Demo State Scan
+name: Checkov Scan
 
 on:
   workflow_dispatch:
@@ -8,9 +8,9 @@ on:
 
 jobs:
   run-checkov-scanner:
-    name: Demo State Scan
+    name: Checkov Scan
     secrets: inherit
-    uses: krakenteknologies/kt-workflows/.github/workflows/terraform-module-scanner.yaml@main
+    uses: kraken-teknologies/kt-workflows/.github/workflows/terraform-module-scanner.yaml@main
     with:
       scan_directory: .
       framework: terraform
